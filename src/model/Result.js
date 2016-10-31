@@ -1,5 +1,5 @@
-const testResults = require('../constants/testResults');
-const submitResults = require('../constants/submitResults');
+import testResults from '../constants/testResults';
+import submitResults from '../constants/submitResults';
 
 class Result {
   constructor() {
