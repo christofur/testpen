@@ -1,5 +1,9 @@
-import Testpen from './testpen';
+import TestPen from './testpen';
+import Result from './model/Result';
+import SuiteResult from './model/SuiteResult'
 
 export {
-  Testpen
+  TestPen,
+  Result,
+  SuiteResult
 }
