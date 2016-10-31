@@ -1,0 +1,22 @@
+{
+  "name": "testpen",
+  "version": "1.0.0",
+  "description": "testpen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christofur/testpen.git"
+  },
+  "keywords": [
+    "testpen"
+  ],
+  "author": "Christofur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christofur/testpen/issues"
+  },
+  "homepage": "https://github.com/christofur/testpen#readme"
+}
