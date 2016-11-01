@@ -61,8 +61,6 @@ describe('A new Result', () => {
     const result = new Result();
     expect(result.testSubmitted).toBe(submittedResults.notSubmitted);
     
-    result.addPassResult('this passed!')
-    
   });
   
 });
