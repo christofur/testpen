@@ -10,9 +10,10 @@ class Result {
     this.testDatestamp = null;
     this.testDescription = '';
     this.testExceptions = [];
+    this.testOutput = '';
     this.testSubmitted = submitResults.notSubmitted;
   }
   
 }
 
-exports = module.exports = Result;
+export default Result;

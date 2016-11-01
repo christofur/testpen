@@ -16,4 +16,4 @@ class SuiteResult {
   
 }
 
-exports = module.exports = SuiteResult;
+export default SuiteResult;
