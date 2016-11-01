@@ -28,7 +28,7 @@ class SuiteResult {
   
   /**
    * Record that this test passed. Provide the output from the test run
-   * @param testOutput
+   * @param result
    */
   addResult(result) {
     
