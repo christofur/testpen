@@ -38,6 +38,40 @@ class Result {
     this.testOutput = testOutput;
   }
   
+  /**
+   * Record that this test failed. Provide the output from the test run
+   * @param testOutput
+   */
+  addFailResult(testOutput) {
+    
+    if(!this.resultId)
+      throw new Error('Must initialise with constructor call');
+    
+    this.testResult = testResults.failed;
+    this.testDatestamp = new Date();
+    this.testOutput = testOutput;
+  }
+  
+  /**
+   * Record that this test failed. Provide the output from the test run
+   * @param exceptions
+   */
+  addExceptionResult(exceptions) {
+    
+    if(!this.resultId)
+      throw new Error('Must initialise with constructor call');
+    
+    this.testResult = testResults.error;
+    this.testDatestamp = new Date();
+    
+    if(exceptions && exceptions instanceof Array) {
+      this.testExceptions = this.testExceptions.concat(exceptions);
+    }
+    else if (exceptions && exceptions instanceof Error) {
+      this.testExceptions.push(exceptions);
+    }
+    
+  }
 }
 
 export default Result;
