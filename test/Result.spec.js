@@ -6,10 +6,18 @@ import submittedResults from '../src/constants/submitResults';
 describe('A new Result', () => {
   
   
-  it('should have an empty Id', () => {
+  it('should have an Id', () => {
     
     const result = new Result();
-    expect(result.resultId).toBe('');
+    expect(result.resultId).toExist();
+    
+  });
+  
+  it('should have a randomly generated Id', () => {
+    
+    const result1 = new Result();
+    const result2 = new Result();
+    expect(result1.resultId).toNotEqual(result2.resultId);
     
   });
   
@@ -27,10 +35,11 @@ describe('A new Result', () => {
     
   });
   
-  it('should have an empty description', () => {
+  it('should have an valid description', () => {
     
-    const result = new Result();
-    expect(result.testDescription).toNotExist();
+    const testDescription = 'This is a single test';
+    const result = new Result(testDescription);
+    expect(result.testDescription).toBe(testDescription);
     
   });
   
@@ -52,6 +61,8 @@ describe('A new Result', () => {
     
     const result = new Result();
     expect(result.testSubmitted).toBe(submittedResults.notSubmitted);
+    
+    result.addPassResult('this passed!')
     
   });
   
